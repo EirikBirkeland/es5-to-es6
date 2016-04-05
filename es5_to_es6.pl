@@ -20,7 +20,7 @@ foreach (<>) {
    # Remove unnecessary semicolons ;)
    s/;(\s*)$/$1/;
 
-   # Add semicolons where actually needed (in front of parentheses and brackets)
+   # Add semicolons where actually needed (in front of sentence-initial parentheses and brackets)
    s/^(?=[\(\{])/;/g;
 
    print;
