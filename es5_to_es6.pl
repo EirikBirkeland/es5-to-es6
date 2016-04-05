@@ -17,7 +17,7 @@ foreach (<>) {
    # Add spacing around any arrows lacking it
    s/\s*=>\s*(?=\{)/ => /g;
 
-   # Change var to let, while preserving spacing. Note that witching from var to let WILL break some code (function scope <-> block scope).
+   # Change var to let, while preserving spacing. Note that switching from var to let WILL break some code (function scope <-> block scope).
    s/^(\s*)\bvar\b/$1let/;
 
    # change require lines from let to const
