@@ -8,13 +8,13 @@ foreach (<>) {
    # Skip if the line is a standard comment (/* */ not implemented)
    next if m{^\s*(?://};
 
-   # Change anonymous functions style
+   # Change anonymous functions to arrow functions
    s/function\s*(\(.*?\))\s*\{/$1 => {/g;
 
-   # Remove parenthesis around single argument in anonymous functions
+   # Remove parenthesis around single argument in anonymous arrow functions
    s/\(([a-zA-Z\$-_]+)\)=>\{/$1 => {/g;
 
-   # change var to let
+   # Change var to let, while preserving spacing. Note that witching from var to let WILL break some code (function scope <-> block scope).
    s/^(\s*)\bvar\b/$1let/;
 
    # Remove unnecessary semicolons ;)
