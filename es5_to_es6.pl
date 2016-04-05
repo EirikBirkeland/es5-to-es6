@@ -1,6 +1,6 @@
 # WARNING: This will affect any example code in comments as well!
 # WARNING 2: This requires a properly formatted file
-#test
+
 use strict;
 use warnings;
 
