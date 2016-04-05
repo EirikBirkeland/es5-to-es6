@@ -1,6 +1,6 @@
 # WARNING: This will affect any example code in comments as well!
 # WARNING 2: This requires a properly formatted file
-
+test
 foreach (<>) {
    # Change anonymous functions style
    s/function\s*(\(.*?\))\s*\{/$1=>{/g;
