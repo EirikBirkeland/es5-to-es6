@@ -1,5 +1,5 @@
-# WARNING: This will affect any example code in comments as well!
-# WARNING 2: This requires a properly formatted file
+# WARNING: Require the input to have one statement per line at most
+# WARNING: will replace contents within comment blocks
 
 use strict;
 use warnings;
