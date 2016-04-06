@@ -1,5 +1,6 @@
-# WARNING: Require the input to have one statement per line at most
+# WARNING: since the input is streamed, each line is is considered in isolation
 # WARNING: will replace contents within comment blocks
+# WARNING: always keep backups
 
 use strict;
 use warnings;
@@ -14,7 +15,7 @@ foreach (<>) {
    # Remove parenthesis around single argument in anonymous arrow functions
    s/\(([a-zA-Z\$-_]+)\)=>\{/$1 => {/g;
 
-   # Add spacing around any arrows lacking it
+   # Cosmetic: Add spacing around any arrows lacking it
    s/\s*=>\s*(?=\{)/ => /g;
 
    # Change var to let, while preserving spacing. Note that switching from var to let WILL break some code (function scope <-> block scope).
